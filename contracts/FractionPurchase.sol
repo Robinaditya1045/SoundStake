@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
 import "./SongFractionalized.sol";
 import "./SongEscrow.sol";
@@ -29,6 +29,3 @@ contract FractionPurchase {
         require(success, "Failed to transfer Ether to escrow");
     }
 }
-//0x2E9d30761DB97706C536A112B9466433032b28e3
-//0x3c725134d74D5c45B4E4ABd2e5e2a109b5541288
-//0xDA07165D4f7c84EEEfa7a4Ff439e039B7925d3dF

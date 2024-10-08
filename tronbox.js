@@ -1,8 +1,10 @@
 module.exports = {
   networks: {
     development: {
-      privateKey: '32799031a989e0d47af2fcaaa2d4e0731786c82769dbb62ad5bc9166671af11f', // Replace with your private key
+      privateKey: 'fdc61ecd9ccfabf168027fc3d051efa155fdf9e932f81c4e29ec062bc5f2c013', // Replace with your private key
       fullHost: "http://127.0.0.1:8080", // Tron local node or TronGrid Devnode
+      userFeePercentage: 50,
+      feeLimit: 1000 * 1e6,
       network_id: "1" // Match any network id
     },
     shasta: {
@@ -14,7 +16,7 @@ module.exports = {
     },
     compilers: {
       solc: {
-        version: '0.8.0'
+        version: '0.8.20'
       }
     }
   }

@@ -2,8 +2,10 @@ module.exports = {
     networks: {
       // Local Development Network (with Tron Quickstart or TronGrid Devnode)
       development: {
-        privateKey: '32799031a989e0d47af2fcaaa2d4e0731786c82769dbb62ad5bc9166671af11f', // Replace with your private key
+        privateKey: 'fdc61ecd9ccfabf168027fc3d051efa155fdf9e932f81c4e29ec062bc5f2c013', // Replace with your private key
         fullHost: "http://127.0.0.1:8080", // URL for Tron Quickstart node or TronGrid Devnode
+        userFeePercentage: 50,
+        feeLimit: 1000 * 1e6,
         network_id: "1" // Match any network id
       },
   
@@ -27,7 +29,7 @@ module.exports = {
     // Compiler Configuration (optional)
     compilers: {
       solc: {
-        version: '0.8.0' // Replace with the version of Solidity you're using
+        version: '0.8.20' // Replace with the version of Solidity you're using
       }
     }
   };

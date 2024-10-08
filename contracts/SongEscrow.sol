@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
 import "./SongFractionalized.sol";
 
@@ -35,4 +35,3 @@ contract SongEscrow {
     // Fallback function to accept Ether
     receive() external payable {}
 }
-//0xDA07165D4f7c84EEEfa7a4Ff439e039B7925d3dF
