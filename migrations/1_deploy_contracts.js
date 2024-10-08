@@ -1,6 +1,7 @@
 const FractionPurchase = artifacts.require("../build/contracts/FractionPurchase.sol");
 const SongFractionalized = artifacts.require("../build/contracts/SongFractionalized.sol");
 const SongEscrow = artifacts.require("../build/contracts/SongEscrow.sol");
+const SongRevenue = artifacts.require("../build/contracts/SongRevenue.sol");
 const path = require("path");
 const fs = require("fs");
 
@@ -19,6 +20,11 @@ module.exports = async function(deployer) {
   await deployer.deploy(FractionPurchase, songFractionalized.address, songEscrow.address);
   const fractionPurchase = await FractionPurchase.deployed();
   saveFrontendFiles(fractionPurchase, "FractionPurchase");
+
+  
+  await deployer.deploy(SongRevenue,songFractionalized.address);
+  const songRevenue = await SongRevenue.deployed();
+  saveFrontendFiles(songRevenue,"SongRevenue");
 };
 
 // Function to save contract details (ABI and Address) for frontend use
